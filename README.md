@@ -89,10 +89,7 @@ python3 -m pytest storage/test.py
 
 If hupper is not found, ensure it is installed and in your PATH. To run the service with hot reloading:
 
-
-```bash
-hupper -m waitress --port 5000 storage:app
-````
+```bash hupper -m waitress --port 5000 storage:app ````
 
 Explanation: hupper enables hot reloading of Python applications.
 -m specifies the module to run.
@@ -100,33 +97,7 @@ waitress is the WSGI server hosting your application.
 --port 5000 sets the port for the server.
 storage:app specifies the WSGI application callable.
 
+
 ---
 
-####Testing comment
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Test
