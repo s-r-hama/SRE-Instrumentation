@@ -8,7 +8,7 @@ The goal is to integrate Prometheus metrics into the Storage API and visualize t
 
 ---
 
-### Steps Taken to run and Test the app localy
+## Steps Taken to run and Test the app localy
 
 **1. Clone the Repository**
 
@@ -89,7 +89,7 @@ python3 -m pytest storage/test.py
 
 If hupper is not found, ensure it is installed and in your PATH. To run the service with hot reloading:
 
-```bash hupper -m waitress --port 5000 storage:app ````
+```bash hupper -m waitress --port 5000 storage:app ```
 
 Explanation: hupper enables hot reloading of Python applications.
 -m specifies the module to run.
@@ -100,4 +100,31 @@ storage:app specifies the WSGI application callable.
 
 ---
 
-### Test
+## Create a Dockerfile for the Storage API:
+
+**1. Add Prometheus Metrics Endpoint**
+
+Use the `prometheus_client` library to expose metrics and add a `/metrics` endpoint to the Storage API. Add the Prometheus metrics section to `src/run.py`.
+
+
+**2. Create Dockerfile**
+
+Write a Dockerfile to package the Storage API and ensure it runs on `http://storage_api:5000`
+
+**3. Update Docker-Compose**
+
+Modify docker-compose.yml to include the Storage API and link it to the Prometheus container.
+
+Run: ```bash docker-compose up ```
+
+This command starts Prometheus, Grafana, and the Storage API. Verify endpoints:
+
+* Prometheus: `http://localhost:9090`
+* Grafana: `http://localhost:3000`
+* Storage API: `http://localhost:5000`
+
+**4. Verify Metrics Endpoint**
+
+Check Prometheus metrics at `http://localhost:5000/metrics`
+
+Use `scripts/generate_traffic.sh` to generate traffic if needed.
