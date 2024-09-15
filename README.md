@@ -34,7 +34,7 @@ I run the following commands in MacOS
 
 
 
-* Install Dependencies
+* <u>Install Dependencies</u>
 
 
  ```bash
