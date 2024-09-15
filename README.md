@@ -275,3 +275,5 @@ kubectl apply -f grafana.yaml
 7. **Incident Response**
 
   *  Plan and Test: Have an incident response plan in place and regularly test it to ensure you can respond effectively to security incidents.
+
+-----
