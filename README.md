@@ -157,7 +157,7 @@ Add a new **Time Series panel** with below query.
 * Legend: "Average Request Duration".
 
 
-**Add another new **Time Series panel**
+**Add another new Time Series panel**
 
 **Graph 2: HTTP Status Codes**
 * Add another graph panel.
@@ -166,7 +166,12 @@ Add a new **Time Series panel** with below query.
 
 
 **Save Dashboard**
-* Click Save and give the dashboard a name.
+* Click Save and give the dashboard a name. Below are screenshots of the graph metrics I created:
+
+## Images
+
+![This is an alt text.](/image/1.png "This is a sample image.")
+
 
 
 
