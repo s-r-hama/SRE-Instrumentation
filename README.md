@@ -113,7 +113,7 @@ Write a Dockerfile to package the Storage API and ensure it runs on `http://stor
 
 **3. Update Docker-Compose**
 
-Modify docker-compose.yml to include the Storage API and link it to the Prometheus container.
+Modify docker-compose.yml to include the Storage API and link it to the Prometheus container `(check code in docker-compose.yml)`.
 
 Run: ```bash docker-compose up ```
 
@@ -128,3 +128,39 @@ This command starts Prometheus, Grafana, and the Storage API. Verify endpoints:
 Check Prometheus metrics at `http://localhost:5000/metrics`
 
 Use `scripts/generate_traffic.sh` to generate traffic if needed.
+
+---
+ ## Visualize Metrics in Grafana
+
+
+**1. Log in to Grafana**
+
+Access Grafana at `http://localhost:3000` and log in with default credentials (admin/admin). Change the password upon first login.
+
+
+**2. Add Prometheus as a Data Source**
+
+* Go to Configuration -> Data Sources.
+* Add Prometheus with the URL `http://localhost:9090`.
+
+**3. Create Dashboards**
+
+**Graph 1: Average HTTP Request Duration**
+* Add a graph panel.
+* Query: avg(http_request_duration_seconds_count{})
+* Legend: "Average Request Duration".
+
+### Graph 2: HTTP Status Codes
+* Add another graph panel.
+* Query: sum by (status_code) (rate(http_requests_total[5m]))
+* Legend: "HTTP Status Codes".
+
+
+
+
+
+
+
+
+
+ ---
