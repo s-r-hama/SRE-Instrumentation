@@ -148,8 +148,8 @@ Access Grafana at `http://localhost:3000` and log in with default credentials (a
 
 **Create a new dashboard:**
 
-    Click **Create** -> **Dashboard**.
-    Add a new **Time Series panel**.
+Click **Create** -> **Dashboard**.
+Add a new **Time Series panel** with below query.
 
 **Graph 1: Average HTTP Request Duration**
 * Add a graph panel.
