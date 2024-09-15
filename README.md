@@ -143,21 +143,30 @@ Access Grafana at `http://localhost:3000` and log in with default credentials (a
 * Go to Configuration -> Data Sources.
 * Add Prometheus with the URL `http://localhost:9090`.
 
-**3. Create Dashboards**
+**3. Create Grafana Dashboard**
+
+
+**Create a new dashboard:**
+
+    Click **Create** -> **Dashboard**.
+    Add a new **Time Series panel**.
 
 **Graph 1: Average HTTP Request Duration**
 * Add a graph panel.
 * Query: avg(http_request_duration_seconds_count{})
 * Legend: "Average Request Duration".
 
-### Graph 2: HTTP Status Codes
+
+**Add another new **Time Series panel**
+
+**Graph 2: HTTP Status Codes**
 * Add another graph panel.
 * Query: sum by (status_code) (rate(http_requests_total[5m]))
 * Legend: "HTTP Status Codes".
 
 
-
-
+**Save Dashboard**
+* Click Save and give the dashboard a name.
 
 
 
