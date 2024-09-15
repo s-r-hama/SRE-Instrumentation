@@ -4,7 +4,7 @@ This project involves adding Prometheus instrumentation to an in-memory Storage 
 
 ### Goal
 
-The goal is to integrate Prometheus metrics into the Storage API and visualize them using Grafana.
+The goal is to integrate Prometheus metrics into the Storage API and visualize them using Grafana. **Storage API** this service implements a simple in-memory Storage API for putting, getting, and deleting binary data. 
 
 ---
 
@@ -25,9 +25,6 @@ cd PAth of repository
 Review the README and challenge instructions to understand the required instrumentation, the monitoring tools used, and the expected outcomes. The objective is to add Prometheus instrumentation to the Python-based in-memory Storage API.
 Reviewed the code line by line and added comment expalining what each line does in the associated code files
 
-###  Storage API
-
-This service implements a simple in-memory Storage API for putting, getting, and deleting binary data. 
 
 **3. Set Up the Environment locally first to test it running:** 
 
