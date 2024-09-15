@@ -233,8 +233,10 @@ kubectl apply -f grafana.yaml
 * **Security** : As I run the project localy on my computer didnt consider implementing Security best practices also time didnt allow ,below are some points to consider if you run a live project environment:
 
 
+---
+## Security Chellenges: 
 
-## Here are some common security challenges and considerations you should be aware of, by addressing these security challenges, you can help ensure that your project is secure and resilient against potential threats: 
+ Here are some common security challenges and considerations you should be aware of, by addressing these security challenges, you can help ensure that your project is secure and resilient against potential threats: 
 
 1. API Security
 
