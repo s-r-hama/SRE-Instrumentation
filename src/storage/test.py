@@ -46,9 +46,6 @@ def test_delete_bucket_not_found():
 ######## explanation here  of the code above
 
 
-
-
-
 """The unittest.mock module in Python provides a framework for creating and using mock objects for unit testing. It is especially useful for isolating code under test from external dependencies, allowing you to test your code in a controlled and predictable environment. Here's a summary of what unittest.mock does:
 
     Create Mock Objects: unittest.mock allows you to create mock objects that can simulate the behavior of real objects. These mocks can be configured to return specific values, raise exceptions, or track how they are used.

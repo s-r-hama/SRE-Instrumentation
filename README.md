@@ -28,13 +28,13 @@ Reviewed the code line by line and added comment expalining what each line does 
 
 **3. Set Up the Environment locally first to test it running:** 
 
-Follow the steps outlined in *src/README.md* for setup details.
+Follow the steps outlined in `src/README.md`for setup details.
 
 I run the following commands in MacOS
 
 
 
-* <u>Install Dependencies</u>
+**Install Dependencies**
 
 
  ```bash
@@ -54,7 +54,7 @@ python3 run.py
 Explanation: This command sets up and serves the web application using the Waitress server on the specified port (default 5000). Waitress is a production-quality WSGI server for Python web applications, handling multiple requests efficiently.
 
 
-* Development Setup
+**Development Setup**
 
 Install Development Dependencies
 
@@ -67,7 +67,7 @@ make dev or pip3 install -e .[dev]
 
 Explanation: The -e flag installs the package in editable mode, and [dev] installs additional development dependencies such as linters and testing frameworks.
 
-* Run Tests
+**Run Tests**
 
 To run tests, use:
 
@@ -84,7 +84,7 @@ Troubleshooting:
 python3 -m pytest storage/test.py
 ```
 
-* Run the Service with Hot Reloading
+**Run the Service with Hot Reloading**
 
 If hupper is not found, ensure it is installed and in your PATH. To run the service with hot reloading:
 
