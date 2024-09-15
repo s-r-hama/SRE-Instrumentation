@@ -168,13 +168,66 @@ Add a new **Time Series panel** with below query.
 **Save Dashboard**
 * Click Save and give the dashboard a name. Below are screenshots of the graph metrics I created:
 
-## Images
 
 ![This is an alt text.](/image/1.png "This is a sample image.")
 
 
 
 
+ ---
 
+ ## Try to figure out why you see HTTP 500 errors for some endpoints:
+
+
+**Summary**
+
+* Confirm Metric Reporting: Ensure HTTP 500 errors are being reported and collected by Prometheus.
+* Examine Logs: Check application logs for error details.
+* Review Configurations: Verify that all configurations are correct and that resources are sufficient.
+* Review Changes: Look at recent code or configuration changes.
+* Test and Debug: Reproduce and debug the issue in a controlled environment.
+* Consult Documentation: Look for known issues or solutions in relevant documentation.
+
+
+* when tried to run docker compose , the storage_api app got some warning as following:
+
+ ```bash
+storage_api-1  | WARNING:waitress.queue:Task queue depth is 2
+storage_api-1  | WARNING:waitress.queue:Task queue depth is 1
+
+```
+
+**Addressing Waitress Queue Depth Warnings**
+
+* indicate a low task queue depth. This could impact performance and cause HTTP 500 errors. Consider increasing the queue depth or number of threads, optimizing code, and monitoring performance.
+
+
+* Understanding Task Queue Depth
+
+- Task Queue Depth: This refers to the number of tasks (or requests) that can be queued up for processing by Waitress. A higher depth means that more requests can be queued and processed concurrently.
+
+- Warnings:
+        Depth of 1: Indicates that the task queue is set to a depth of 1, meaning only one request can be queued at a time. This could lead to performance issues under load.
+        Depth of 2: Indicates a similar issue but with a slightly larger queue. It means that there’s a bit more capacity, but still, it’s relatively low for handling a high number of concurrent requests.
 
  ---
+
+## Deploy the Storage API, Prometheus, and Grafana to Kubernetes
+
+* All the deployment of kubernetes manifest files are in `kubernetes` folder, to run them localy on your kubernetes cluster:
+
+```bash
+kubectl apply -f storage-api.yaml
+kubectl apply -f prometheus.yaml
+kubectl apply -f grafana.yaml
+
+```
+
+---
+
+## Challenges
+
+* **Python Understanding**: Initially unfamiliar with Python,  took time to research the code, learning how Flask and Prometheus work.
+* **Prometheus & Grafana**:  had no prior experience installing or configuring dashboards and metrics, but learned by experimenting and exploring documentation.
+* **Kubernetes**: Due to limited time,  only created the Kubernetes manifest files. With more time,  would have deployed the app to AWS EKS (Elastic kuberentes service) or GKE (Google Cloud Engine) using ArgoCD and GitLab CI for full automation, and ECR (Elastic container registery) by AWS for image storage.
+
