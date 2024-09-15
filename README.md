@@ -8,7 +8,7 @@ The goal is to integrate Prometheus metrics into the Storage API and visualize t
 
 ---
 
-### Steps Taken
+### Steps Taken to run and Test the app localy
 
 **1. Clone the Repository**
 
@@ -18,6 +18,7 @@ Clone the repository to your local machine to explore and make changes:
 git clone repository
 cd PAth of repository
 ```
+
 
 
 **2. Understand the Requirements**
